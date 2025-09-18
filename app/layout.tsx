@@ -20,7 +20,7 @@ export default function RootLayout({
           <HeadSection />
           <div className="flex h-full">
             <MenuList />
-            <div className="w-screen p-5">{children}</div>
+            <div className="w-full pl-2 md:pl-5 pt-5 lg:pr-5">{children}</div>
           </div>
         </ContextProvider>
       </body>

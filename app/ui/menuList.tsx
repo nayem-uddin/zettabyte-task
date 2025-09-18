@@ -26,9 +26,9 @@ export default function MenuList() {
   return (
     <div
       className={clsx(
-        "border-r border-r-gray-400 h-screen transition-all duration-200",
+        "border-r border-r-gray-400 min-h-dvh transition-all duration-200",
         {
-          "w-60": expand,
+          "w-20 md:w-60": expand,
           "w-20": !expand,
         }
       )}

@@ -1,16 +1,18 @@
 "use client";
 
 import { useFetch } from "../lib/customHooks";
-import PostCard from "./postCard";
 import { Post } from "../lib/definitions";
+import PostCard from "./postCard";
 
 export default function PostsShowcase() {
-  const posts = useFetch("/posts");
+  const posts = useFetch<Post>("/posts");
+  const totalPosts = posts?.length;
   return (
     <div className="flex flex-wrap justify-around gap-y-8">
       {posts !== null &&
-        posts?.length > 0 &&
-        posts?.map((post: Post) => <PostCard key={post?.title} {...post} />)}
+        ((totalPosts &&
+          posts?.map((post) => <PostCard key={post?.id} {...post} />)) ||
+          (!totalPosts && <p className="text-2xl mt-10">No posts found</p>))}
     </div>
   );
 }

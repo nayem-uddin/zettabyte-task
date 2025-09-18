@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { Post } from "./definitions";
-export function useFetch(endpoint: string): Array<Post> | null {
+export function useFetch<T>(endpoint: string): Array<T> | null {
   const [fetchedData, setFetchedData] = useState(null);
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/${endpoint}`)

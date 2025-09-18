@@ -1,4 +1,4 @@
-export default function Skeleton() {
+export default function PostCardSkeleton() {
   return (
     <div className="mx-auto w-full max-w-sm rounded-md border border-gray-400 animate-pulse p-4">
       <div className="flex animate-pulse space-x-4">

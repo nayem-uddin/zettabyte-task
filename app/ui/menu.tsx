@@ -13,9 +13,10 @@ export default function Menu(props: Option) {
       <Link
         href={link}
         prefetch
-        className={clsx("flex gap-x-2 m-auto max-w-20 items-center", {
+        className={clsx("flex flex-col gap-x-2 m-auto max-w-20 items-center", {
           "text-blue-500": pathname === link,
-          "flex-col": !expand,
+          "md:flex-col": !expand,
+          "md:flex-row": expand,
         })}
       >
         <span>
