@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { inter, montSerrat } from "./fonts";
 
 export default function PostCard({
@@ -13,6 +14,9 @@ export default function PostCard({
         {title}
       </h3>
       <p className={`line-clamp-3 ${montSerrat.className}`}>{body}</p>
+      <Link href={`/`} className="underline underline-offset-2 text-blue-500">
+        See more
+      </Link>
     </article>
   );
 }

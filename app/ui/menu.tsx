@@ -9,7 +9,14 @@ export default function Menu(props: Option) {
   const { link, label } = props;
   const { expand } = useExpandContext();
   return (
-    <li className={`hover:rounded-lg cursor-pointer hover:bg-neutral-300 py-3`}>
+    <li
+      className={clsx(
+        `hover:rounded-lg cursor-pointer hover:bg-neutral-300 py-3`,
+        {
+          "hidden md:block": !expand,
+        }
+      )}
+    >
       <Link
         href={link}
         prefetch

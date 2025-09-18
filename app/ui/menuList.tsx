@@ -29,7 +29,7 @@ export default function MenuList() {
         "border-r border-r-gray-400 min-h-dvh transition-all duration-200",
         {
           "w-20 md:w-60": expand,
-          "w-20": !expand,
+          "w-0 md:block md:w-20": !expand,
         }
       )}
     >

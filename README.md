@@ -5,3 +5,4 @@
 - TypeScript
 - Next.js
 - Tailwind CSS
+- Motion (former "Framer-motion")

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import MenuList from "./ui/menuList";
 import HeadSection from "./ui/headSection";
-import ContextProvider from "./context/contextProvider";
+import { ContextProvider } from "./context/contextProvider";
 
 export const metadata: Metadata = {
   title: "Dashboard",
