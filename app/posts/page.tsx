@@ -1,7 +1,11 @@
+import { Suspense } from "react";
+import Loading from "./loading";
+import PostsShowcase from "../ui/postsShowcase";
+
 export default function Page() {
   return (
-    <div>
-      <h1>Posts</h1>
-    </div>
+    <Suspense fallback={<Loading />}>
+      <PostsShowcase />
+    </Suspense>
   );
 }

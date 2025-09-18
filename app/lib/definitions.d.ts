@@ -10,3 +10,10 @@ export interface ContextType {
   expand: boolean;
   setExpand: Dispatch<SetStateAction<boolean>>;
 }
+
+export interface Post {
+  id: number;
+  userId: number;
+  title: string;
+  body: string;
+}
