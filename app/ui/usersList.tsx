@@ -49,7 +49,7 @@ export default function UsersList() {
             (!totalUsers && <EmptyDataMessage />))}
       </motion.table>
       {showModal && (
-        <>{selectedRow && <Modal {...selectedRow} show={showModal} />}</>
+        <>{selectedRow && <Modal {...selectedRow} setShow={setShowModal} />}</>
       )}
     </>
   );
