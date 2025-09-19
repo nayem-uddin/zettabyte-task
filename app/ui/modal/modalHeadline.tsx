@@ -1,4 +1,4 @@
-import { merriWeather } from "./fonts";
+import { merriWeather } from "../fonts";
 
 export default function ModalHeadline() {
   return (

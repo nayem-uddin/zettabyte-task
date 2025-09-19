@@ -1,5 +1,5 @@
-import { FieldValuePair } from "../lib/definitions";
-import { montSerrat } from "./fonts";
+import { FieldValuePair } from "../../lib/definitions";
+import { montSerrat } from "../fonts";
 
 export default function ModalBodyText(props: FieldValuePair) {
   const { field, value } = props;

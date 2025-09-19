@@ -1,4 +1,4 @@
-import { User } from "../lib/definitions";
+import { User } from "../../lib/definitions";
 interface Props extends User {
   handleModalDisplay: (user: User) => void;
 }

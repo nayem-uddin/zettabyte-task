@@ -1,17 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { useFetch } from "../lib/customHooks";
-import { User } from "../lib/definitions";
-import EmptyDataMessage from "./emptyDataMessage";
+import { useFetch } from "../../lib/customHooks";
+import { User } from "../../lib/definitions";
+import EmptyDataMessage from "../emptyDataMessage";
 import TableHead from "./tableHead";
 import TableRow from "./tableRow";
 import { easeInOut, motion } from "motion/react";
-import Modal from "./modal";
+import Modal from "../modal/modal";
 export default function UsersList() {
   const [showModal, setShowModal] = useState(false);
   const [selectedRow, setSelectedRow] = useState<User | null>(null);
-  const users = useFetch<User>("users");
+  const { data: users } = useFetch<User>("users");
   const durationInSec = 1;
   const delayInSec = 0;
   const totalUsers = users?.length;

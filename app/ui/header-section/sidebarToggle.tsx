@@ -1,7 +1,7 @@
 "use client";
 import { Menu, MenuOpen } from "@mui/icons-material";
 
-import { useExpandContext } from "../context/context";
+import { useExpandContext } from "../../context/context";
 
 export default function SidebarToggle() {
   const { setExpand, expand } = useExpandContext();

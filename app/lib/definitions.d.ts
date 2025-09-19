@@ -29,24 +29,25 @@ export interface User {
   company: Company;
 }
 
-export interface Address {
+type Address = {
   street: string;
   suite: string;
   city: string;
   zipcode: string;
   geo: Geo;
-}
-export interface Company {
+};
+type Company = {
   name: string;
   catchPhrase: string;
   bs: string;
-}
+};
+
+type Geo = {
+  lat: string;
+  lng: string;
+};
+
 export interface FieldValuePair {
   field: string;
   value: string;
-}
-
-export interface Geo {
-  lat: string;
-  lng: string;
 }

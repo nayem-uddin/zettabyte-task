@@ -1,11 +1,12 @@
-import TableRowSkeleton from "../ui/tableRowSkeleton";
+import TableRowSkeleton from "../ui/users-page/tableRowSkeleton";
 
 export default function Loading() {
+  const totalPlaceholders = 3;
   return (
     <div>
-      <TableRowSkeleton />
-      <TableRowSkeleton />
-      <TableRowSkeleton />
+      {Array.from({ length: totalPlaceholders }).map((v, i) => (
+        <TableRowSkeleton key={i} />
+      ))}
     </div>
   );
 }

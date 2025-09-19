@@ -1,22 +1,24 @@
 import { Dispatch, SetStateAction } from "react";
-import { User } from "../lib/definitions";
+import { User } from "../../lib/definitions";
 import ModalCloseButton from "./modalCloseButton";
 import ModalHeadline from "./modalHeadline";
 import ModalBody from "./modalBody";
 import { easeInOut, motion } from "motion/react";
+import ModalContainer from "./modalContainer";
 interface Props extends User {
   setShow: Dispatch<SetStateAction<boolean>>;
 }
 export default function Modal(props: Props) {
   const { setShow } = props;
+  const durationInSeconds = 0.5;
   return (
-    <div className="fixed z-1 left-1/2 top-0 -translate-x-1/2 bg-[rgba(0,0,0,0.4)] size-full flex">
+    <ModalContainer>
       <motion.div
         className="bg-white m-auto size-fit shadow-2xl/100 border"
         initial={{ translateY: "-100%" }}
         animate={{ translateY: 0 }}
         transition={{
-          duration: 0.5,
+          duration: durationInSeconds,
           ease: easeInOut,
         }}
       >
@@ -27,6 +29,6 @@ export default function Modal(props: Props) {
         <hr />
         <ModalBody {...props} />
       </motion.div>
-    </div>
+    </ModalContainer>
   );
 }

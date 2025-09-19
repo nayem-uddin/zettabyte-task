@@ -1,4 +1,4 @@
-import { FieldValuePair, User } from "../lib/definitions";
+import { FieldValuePair, User } from "../../lib/definitions";
 import ModalBodyText from "./modalBodyText";
 export default function ModalBody(props: User) {
   const details: FieldValuePair[] = [

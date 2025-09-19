@@ -1,12 +1,12 @@
 "use client";
 
-import { useFetch } from "../lib/customHooks";
-import { Post } from "../lib/definitions";
+import { useFetch } from "../../lib/customHooks";
+import { Post } from "../../lib/definitions";
 import PostCard from "./postCard";
-import EmptyDataMessage from "./emptyDataMessage";
+import EmptyDataMessage from "../emptyDataMessage";
 
 export default function PostsShowcase() {
-  const posts = useFetch<Post>("/posts");
+  const { data: posts } = useFetch<Post>("/posts");
   const totalPosts = posts?.length;
 
   return (

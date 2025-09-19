@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import MenuList from "./ui/menuList";
-import HeadSection from "./ui/headSection";
+import HeadSection from "./ui/header-section/headSection";
 import { ContextProvider } from "./context/contextProvider";
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: {
+    template: "Dashboard | %s",
+    default: "Dashboard",
+  },
 };
 
 export default function RootLayout({
@@ -18,10 +21,12 @@ export default function RootLayout({
       <body>
         <ContextProvider>
           <HeadSection />
-          <div className="flex h-full">
+          <main className="flex">
             <MenuList />
-            <div className="w-full pl-2 md:pl-5 pt-5 lg:pr-5">{children}</div>
-          </div>
+            <section className="w-full pl-2 md:pl-5 pt-5 lg:pr-5">
+              {children}
+            </section>
+          </main>
         </ContextProvider>
       </body>
     </html>
