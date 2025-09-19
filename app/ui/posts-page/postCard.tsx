@@ -21,7 +21,11 @@ export default function PostCard(props: Post) {
         {title}
       </h3>
       <p className={`line-clamp-3 ${montSerrat.className}`}>{body}</p>
-      <Link href={`/`} className="underline underline-offset-2 text-blue-500">
+      <Link
+        href={`/posts/${id}`}
+        className="underline underline-offset-2 text-blue-500"
+        target="_blank"
+      >
         See more
       </Link>
     </motion.article>
