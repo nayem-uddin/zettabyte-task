@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { inter, montSerrat } from "../fonts";
-import { easeOut, motion } from "motion/react";
+import { easeOut, motion } from "framer-motion";
 import { Post } from "../../lib/definitions";
 export default function PostCard(props: Post) {
   const delay = 0.1;

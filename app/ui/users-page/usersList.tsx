@@ -6,7 +6,7 @@ import { User } from "../../lib/definitions";
 import EmptyDataMessage from "../emptyDataMessage";
 import TableHead from "./tableHead";
 import TableRow from "./tableRow";
-import { easeInOut, motion } from "motion/react";
+import { easeInOut, motion } from "framer-motion";
 import Modal from "../modal/modal";
 export default function UsersList() {
   const [showModal, setShowModal] = useState(false);

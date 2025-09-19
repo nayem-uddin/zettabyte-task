@@ -1,12 +1,17 @@
-import { robotoSlab } from "./ui/fonts";
+import BarChart from "./ui/bar-chart/barChart";
+import ShortDescription from "./ui/homepage/shortDescription";
+import WelcomeUser from "./ui/homepage/welcomeUser";
+import PieChart from "./ui/pie-chart/pieChart";
 
 export default function Home() {
   return (
     <div>
-      <h1 className={`text-3xl md:text-4xl ${robotoSlab.className}`}>
-        Welcome, user!
-      </h1>
-      <p className={`mt-4`}>Here is the summary of visits on your webpage.</p>
+      <WelcomeUser />
+      <ShortDescription />
+      <div className="flex flex-wrap justify-around mt-5 md:mt-10 gap-y-5">
+        <PieChart />
+        <BarChart />
+      </div>
     </div>
   );
 }

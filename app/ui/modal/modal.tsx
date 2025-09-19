@@ -3,7 +3,7 @@ import { User } from "../../lib/definitions";
 import ModalCloseButton from "./modalCloseButton";
 import ModalHeadline from "./modalHeadline";
 import ModalBody from "./modalBody";
-import { easeInOut, motion } from "motion/react";
+import { easeInOut, motion } from "framer-motion";
 import ModalContainer from "./modalContainer";
 interface Props extends User {
   setShow: Dispatch<SetStateAction<boolean>>;

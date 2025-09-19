@@ -1,7 +1,7 @@
 import { Cancel } from "@mui/icons-material";
 import ModalContainer from "../modal/modalContainer";
 import { inter } from "../fonts";
-import { easeInOut, motion } from "motion/react";
+import { easeInOut, motion } from "framer-motion";
 export default function Popup({
   error,
   closePopup,
