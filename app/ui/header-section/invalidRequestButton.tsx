@@ -17,7 +17,7 @@ export default function InvalidRequestButton() {
   return (
     <div>
       <button
-        className="text-sm md:text-base border w-24 md:w-fit bg-blue-500 text-white rounded-md cursor-pointer md:p-3"
+        className="text-sm md:text-base border w-24 md:w-fit bg-blue-500 text-white rounded-md md:p-3"
         onClick={makeInvalidRequest}
       >
         Make invalid request

@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { useExpandContext } from "../context/context";
 import { Option } from "../lib/definitions";
 import Menu from "./menu";
-import { Article, Home, People } from "@mui/icons-material";
+import { AccountBox, Article, Home, People } from "@mui/icons-material";
 const options: Option[] = [
   {
     label: "Home",
@@ -19,6 +19,11 @@ const options: Option[] = [
     label: "Users",
     link: "/users",
     logo: People,
+  },
+  {
+    label: "Profile",
+    link: "/profile",
+    logo: AccountBox,
   },
 ];
 export default function MenuList() {
