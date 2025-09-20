@@ -23,33 +23,31 @@ export default function UsersList() {
   return (
     <>
       {users === null && <Loading />}
-      <motion.table
-        className="w-full border"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: durationInSec,
-          ease: easeInOut,
-          delay: delayInSec,
-        }}
-      >
-        {users !== null &&
-          ((totalUsers && (
-            <>
-              <TableHead />
-              <tbody>
-                {users?.map((user) => (
-                  <TableRow
-                    key={user.id}
-                    {...user}
-                    handleModalDisplay={handleModalDisplay}
-                  />
-                ))}
-              </tbody>
-            </>
-          )) ||
-            (!totalUsers && <EmptyDataMessage />))}
-      </motion.table>
+      {users !== null &&
+        ((totalUsers && (
+          <motion.table
+            className="w-full border"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: durationInSec,
+              ease: easeInOut,
+              delay: delayInSec,
+            }}
+          >
+            <TableHead />
+            <tbody>
+              {users?.map((user) => (
+                <TableRow
+                  key={user.id}
+                  {...user}
+                  handleModalDisplay={handleModalDisplay}
+                />
+              ))}
+            </tbody>
+          </motion.table>
+        )) ||
+          (!totalUsers && <EmptyDataMessage />))}
       {showModal && (
         <>{selectedRow && <Modal {...selectedRow} setShow={setShowModal} />}</>
       )}
