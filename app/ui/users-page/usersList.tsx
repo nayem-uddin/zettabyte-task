@@ -8,6 +8,7 @@ import TableHead from "./tableHead";
 import TableRow from "./tableRow";
 import { easeInOut, motion } from "framer-motion";
 import Modal from "../modal/modal";
+import Loading from "@/app/users/loading";
 export default function UsersList() {
   const [showModal, setShowModal] = useState(false);
   const [selectedRow, setSelectedRow] = useState<User | null>(null);
@@ -21,6 +22,7 @@ export default function UsersList() {
   }
   return (
     <>
+      {users === null && <Loading />}
       <motion.table
         className="w-full border"
         initial={{ opacity: 0 }}
