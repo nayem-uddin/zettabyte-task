@@ -5,4 +5,5 @@
 - TypeScript
 - Next.js
 - Tailwind CSS
-- Motion
+- Framer motion
+- NextAuth
